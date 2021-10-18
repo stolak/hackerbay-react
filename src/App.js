@@ -147,12 +147,12 @@ function App() {
       NewGame();
     }
   }
-
+//use effect to initialise new game
   useEffect(() => {
     NewGame();
   }, []);
 
-
+// Button style
   const Button = styled.button`
   background-color: black;
   color: white;
@@ -189,6 +189,7 @@ function App() {
                   }
             </tbody>
           </table>
+          <h2>Designed by Akinbobola Olawole Stephen </h2>
         </div>
     );
 
