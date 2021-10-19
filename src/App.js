@@ -102,7 +102,9 @@ function App() {
         alert("this move is not allowed");
         return;
       }
+      let localpoint=points;
       if(data[x][y].pointbox==1){
+        localpoint++
         setPoint(points+1);
       }
       
@@ -138,12 +140,14 @@ function App() {
       }
       newdata2.push(newdata[i])
     }
+    let localmove=move+1
     setY(y);
     setX(x);
-    setMove(move+1);
+    
+    setMove(localmove);
     setData(newdata2);
-    if(allowable_point==points){
-      alert("Congratulation! You have score the maximum point of " +points+  " with " +move + " move")
+    if(allowable_point==localpoint){
+      alert("Congratulation! You have score the maximum point of " +allowable_point+  " with " +localmove + " move")
       NewGame();
     }
   }
@@ -194,6 +198,7 @@ function App() {
     );
 
 }
+
 
 
 export default App;
